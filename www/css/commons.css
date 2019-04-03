@@ -1233,7 +1233,31 @@ pre code {
     -ms-flex: 0 0 25%;
     -webkit-box-flex: 0;
     flex: 0 0 25%;
-    max-width: 25%
+    max-width: 25%;
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .user__lk {
+    height: 15px;
+    width: 121px;
+    color: #20202D;
+    font-family: "TT Norms";
+    font-size: 13px;
+    letter-spacing: -0.27px;
+    line-height: 15px;
+    text-align: center;
+  }
+
+  .add {
+    height: 40px;
+    width: 205px;
+    border: 1px solid #6666FF;
+    border-radius: 5px;
+  }
+  
+  .user {
+    display: flex;
   }
 
   .col-md-4 {
