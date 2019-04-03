@@ -48,6 +48,9 @@
                 </div>
               </div>
               <div class="col-md-3">
+                <div class="add">
+                  <a class="add__lk" href="#">Подать объявление</a>
+                </div>
                 <div class="user">
                   <div class="user__photo"><img src="" alt="" width="40" height="40"></div><a class="user__lk" href="#">Личный кабинет</a>
                 </div>
@@ -55,57 +58,105 @@
             </header>
             <div class="row">
               <main class="col-md-9">
-                <section class="section section-ads">
+                <section class="section section-filter">
                   <h2 class="visually-hidden">Объявления</h2>
                   <form class="ads-default-form default-form" action="#" enctype="multipart/form-data">
                     <fieldset class="form-group">
-                      <div class="form-group row">
-                        <div class="col-md-8">
-                          <div class="form-group row">
-                            <label class="col-md-12 col-form-label default-form__label" for="address">Поиск</label>
+                        <div class="section-filter-right">
+                          <div class="form-group big">
+                            <label class="col-md-12 col-form-label default-form__label" for="address"><p>Поиск</p></label>
                             <div class="col-md-12">
                               <input class="form-control default-form__input" type="text" name="address" id="address" placeholder="Район, микрорайон или улица">
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-4 col-form-label default-form__label" for="Type-deal">Тип сделки</label>
-                            <div class="col-md-8">
+                              <label class="col-md-4 col-form-label default-form__label" for="year-of-construction"><p>Год здачи ЖК</p></label>
+                                <select class="form-control default-form__input default-form__input--select" name="year-of-construction" id="year-of-construction">
+                                  <option value="2018">2018</option>
+                                  <option value="2017">2017</option>
+                                </select>
+                          </div>
+                          <div class="form-group row">
+                          <label class="col-md-4 col-form-label default-form__label" for="area-controls"><p>Общая площадь, м<sup>2</sup></p>
+                            <div class="area-controls">
+                              <label class="min-area"><input type="text" name="min-area" placeholder="ОТ"></label>
+                              <label class="max-area"><input type="text" name="max-area" placeholder="ДО"></label>
+                            </div>
+                          </div>
+                          </label>
+                          <div class="form-group row">
+                              <label class="col-md-4 col-form-label default-form__label" for="floor"><p>Этаж</p></label>
+                                <div class="kitchen-area-controls">
+                                  <label class="min-area"><input type="text" name="min-floor" placeholder="ОТ"></label>
+                                  <label class="max-area"><input type="text" name="max-floor" placeholder="ДО"></label>
+                                </div>
+                              </label>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-4 col-form-label default-form__label" for="type-house"><p>Уточнение по этажу</p></label>
+                                <select class="form-control default-form__input default-form__input--select" name="type-house" id="type-house">
+                                    <option value="" selected disabled hidden>Не выбранно</option>
+                                  <option value="Не выбранно">1</option>
+                                  <option value="Не выбранно">2</option>
+                                </select>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-4 col-form-label default-form__label" for="layout"><p>Планировка</p></label>
+                                <select class="form-control default-form__input default-form__input--select" name="layout" id="layout">
+                                    <option value="" selected disabled hidden>Не выбранно</option>
+                                  <option value="Не выбранно">1</option>
+                                  <option value="Не выбранно">2</option>
+                                </select>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-4 col-form-label default-form__label" for="location"><p>Расположение в доме</p></label>
+                                <select class="form-control default-form__input default-form__input--select" name="location" id="location">
+                                  <option value="Не угловая" selected>Не угловая</option>
+                                  <option value="Не выбранно">1</option>
+                                  <option value="Не выбранно">2</option>
+                                </select>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-4 col-form-label default-form__label" for="type-contract"><p>Вид договора</p></label>
+                                <select class="form-control default-form__input default-form__input--select" name="type-contract" id="type-contract">
+                                  <option value="214-Ф3" selected>Эксклюзивный</option>
+                                  <option value="Не выбранно">1</option>
+                                  <option value="Не выбранно">2</option>
+                                </select>
+                          </div>
+                          <div class="form-group row">
+                              <div class="form-group row">
+                                <label class="col-md-12 col-form-label default-form__label" for="address"><p>Контактный телефон</p></label>
+                                  <div class="col-md-12">
+                                  <input class="form-control default-form__input" type="text" name="address" id="address" placeholder="+7 (___) ___-__-__">
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="section-filter-left">
+                          <div class="form-group row">
+                            <label class="col-md-4 col-form-label default-form__label" for="Type-deal"><p>Тип сделки</p></label>
                               <select class="form-control default-form__input default-form__input--select" name="Type-deal" id="Type-deal">
                                 <option value="Покупка">Покупка</option>
                                 <option value="Продажа" selected>Продажа</option>
                                 <option value="Аренда">Аренда</option>
                               </select>
-                              </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-md-4 col-form-label default-form__label" for="type-of-transaction">Тип недвижимости</label>
-                            <div class="col-md-8">
+                            <label class="col-md-4 col-form-label default-form__label" for="type-of-transaction"><p>Тип недвижимости</p></label>
                               <select class="form-control default-form__input default-form__input--select" name="type-of-transaction" id="type-of-transaction">
                                 <option selected value="Жилая">Жилая</option>
                                 <option value="Коммерческая">Коммерческая</option>
                               </select>
                             </div>
-                          </div>
                           <div class="form-group row">
-                              <label class="col-md-4 col-form-label default-form__label" for="object">Объект</label>
-                              <div class="col-md-8">
+                              <label class="col-md-4 col-form-label default-form__label" for="object"><p>Объект</p></label>
                                 <select class="form-control default-form__input default-form__input--select" name="object" id="object">
                                   <option selected value="Квартира в новостройке">Квартира в новостройке</option>
                                   <option value="1">1</option>
                                 </select>
                               </div>
-                            </div>
                             <div class="form-group row">
-                              <label class="col-md-4 col-form-label default-form__label" for="year-of-construction">Год здачи ЖК</label>
-                              <div class="col-md-8">
-                                <select class="form-control default-form__input default-form__input--select" name="year-of-construction" id="year-of-construction">
-                                  <option value="2018">2018</option>
-                                  <option value="2017">2017</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-4 col-form-label default-form__label" for="area-controls">Общая площадь, м<sup>2</sup>
+                                <label class="col-md-4 col-form-label default-form__label" for="area-controls"><p>Общая площадь, м<sup>2</sup></p>
                                   <div class="area-controls">
                                     <label class="min-area"><input type="text" name="min-area" placeholder="ОТ"></label>
                                     <label class="max-area"><input type="text" name="max-area" placeholder="ДО"></label>
@@ -113,7 +164,7 @@
                                 </label>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label default-form__label" for="live-area-controls">Жилая площадь, м<sup>2</sup>
+                                <label class="col-md-4 col-form-label default-form__label" for="live-area-controls"><p>Жилая площадь, м<sup>2</sup></p>
                                   <div class="live-area-controls">
                                     <label class="min-area"><input type="text" name="min-area" placeholder="ОТ"></label>
                                     <label class="max-area"><input type="text" name="max-area" placeholder="ДО"></label>
@@ -121,7 +172,7 @@
                                 </label>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label default-form__label" for="kitchen-area-controls">Площадь кухни, м<sup>2</sup>
+                                <label class="col-md-4 col-form-label default-form__label" for="kitchen-area-controls"><p>Площадь кухни, м<sup>2</sup></p>
                                   <div class="kitchen-area-controls">
                                     <label class="min-area"><input type="text" name="min-area" placeholder="ОТ"></label>
                                     <label class="max-area"><input type="text" name="max-area" placeholder="ДО"></label>
@@ -129,7 +180,7 @@
                                 </label>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label default-form__label" for="type-house">Тип дома</label>
+                                <label class="col-md-4 col-form-label default-form__label" for="type-house"><p>Тип дома</p></label>
                                 <div class="col-md-8">
                                   <select class="form-control default-form__input default-form__input--select" name="type-house" id="type-house">
                                     <option value="Кирпичный" selected>Кирпичный</option>
@@ -139,25 +190,7 @@
                                 </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="floor">Этаж</label>
-                                    <div class="kitchen-area-controls">
-                                      <label class="min-area"><input type="text" name="min-floor" placeholder="ОТ"></label>
-                                      <label class="max-area"><input type="text" name="max-floor" placeholder="ДО"></label>
-                                    </div>
-                                  </label>
-                              </div>
-                              <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="type-house">Уточнение по этажу</label>
-                                  <div class="col-md-8">
-                                    <select class="form-control default-form__input default-form__input--select" name="type-house" id="type-house">
-                                        <option value="" selected disabled hidden>Не выбранно</option>
-                                      <option value="Не выбранно">1</option>
-                                      <option value="Не выбранно">2</option>
-                                    </select>
-                                  </div>
-                              </div>
-                              <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="amount-floor">Этажей в доме</label>
+                                  <label class="col-md-4 col-form-label default-form__label" for="amount-floor"><p>Этажей в доме</p></label>
                                     <div class="kitchen-area-controls">
                                       <label class="min-area"><input type="text" name="amount-floor" placeholder="ОТ"></label>
                                       <label class="max-area"><input type="text" name="amount-floor" placeholder="ДО"></label>
@@ -165,8 +198,7 @@
                                   </label>
                               </div>
                               <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="decoration">Отделка</label>
-                                  <div class="col-md-8">
+                                  <label class="col-md-4 col-form-label default-form__label" for="decoration"><p>Отделка</p></label>
                                     <select class="form-control default-form__input default-form__input--select" name="decoration" id="decoration">
                                         <option value="" selected disabled hidden>Не выбранно</option>
                                       <option value="Не выбранно">1</option>
@@ -174,8 +206,7 @@
                                     </select>
                               </div>
                               <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="status">Статус помещения</label>
-                                  <div class="col-md-8">
+                                  <label class="col-md-4 col-form-label default-form__label" for="status"><p>Статус помещения</p></label>
                                     <select class="form-control default-form__input default-form__input--select" name="status" id="status">
                                         <option value="" selected disabled hidden>Не выбранно</option>
                                       <option value="Не выбранно">1</option>
@@ -183,26 +214,7 @@
                                     </select>
                               </div>
                               <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="layout">Планировка</label>
-                                  <div class="col-md-8">
-                                    <select class="form-control default-form__input default-form__input--select" name="layout" id="layout">
-                                        <option value="" selected disabled hidden>Не выбранно</option>
-                                      <option value="Не выбранно">1</option>
-                                      <option value="Не выбранно">2</option>
-                                    </select>
-                              </div>
-                              <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="location">Расположение в доме</label>
-                                  <div class="col-md-8">
-                                    <select class="form-control default-form__input default-form__input--select" name="location" id="location">
-                                      <option value="Не угловая" selected>Не угловая</option>
-                                      <option value="Не выбранно">1</option>
-                                      <option value="Не выбранно">2</option>
-                                    </select>
-                              </div>
-                              <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="areas">Районы и микрорайоны</label>
-                                  <div class="col-md-8">
+                                  <label class="col-md-4 col-form-label default-form__label" for="areas"><p>Районы и микрорайоны</p></label>
                                     <select class="form-control default-form__input default-form__input--select" name="areas" id="areas">
                                       <option value="" selected disabled hidden>Не выбранно</option>
                                       <option value="Не выбранно">1</option>
@@ -210,40 +222,22 @@
                                     </select>
                               </div>
                               <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="areas">Тип продажи</label>
-                                  <div class="col-md-8">
-                                    <select class="form-control default-form__input default-form__input--select" name="areas" id="areas">
+                                  <label class="col-md-4 col-form-label default-form__label" for="type-sale"><p>Тип продажи</p></label>
+                                    <select class="form-control default-form__input default-form__input--select" name="type-sale" id="type-sale">
                                       <option value="214-Ф3" selected>214-Ф3</option>
                                       <option value="Не выбранно">1</option>
                                       <option value="Не выбранно">2</option>
                                     </select>
                               </div>
                               <label class="form-check-label">
-                                <input class="visually-hidden" type="checkbox" name="direct-no" value="Возможна ипотека">Возможна ипотека
+                                <input class="visually-hidden" type="checkbox" name="direct-no" value="Возможна ипотека"><p>Возможна ипотека</p>
                               </label>
-                              <div class="form-group row">
-                                  <label class="col-md-4 col-form-label default-form__label" for="type-contract">Вид договора</label>
-                                  <div class="col-md-8">
-                                    <select class="form-control default-form__input default-form__input--select" name="type-contract" id="type-contract">
-                                      <option value="214-Ф3" selected>Эксклюзивный</option>
-                                      <option value="Не выбранно">1</option>
-                                      <option value="Не выбранно">2</option>
-                                    </select>
-                              </div>
-                              <div class="col-md-8">
                                 <div class="form-group row">
-                                  <label class="col-md-12 col-form-label default-form__label" for="address">Контактный телефон</label>
-                                    <div class="col-md-12">
-                                    <input class="form-control default-form__input" type="text" name="address" id="address" placeholder="+7 (___) ___-__-__">
-                                </div>
-                              </div>
-                              <div class="col-md-8">
-                                <div class="form-group row">
-                                  <label class="col-md-12 col-form-label default-form__label" for="address">Номер договора</label>
+                                  <label class="col-md-12 col-form-label default-form__label" for="address"><p>Номер договора</p></label>
                                     <div class="col-md-12">
                                     <input class="form-control default-form__input" type="text" name="address" id="address" placeholder="Не выбрано">
                                 </div>
-                              </div>
+                          </div>    
                         </div>
                           <div class="form-group">
                             <button class="button button--submit default-form__button" type="submit">Поиск объявлений</button>
@@ -251,8 +245,10 @@
                           <div class="form-group">
                             <button class="button button--submit default-form__button" type="submit">Очистить фильтр</button>
                           </div>
-                      </div>
                     </fieldset>
+                  </form>
+                  </div>
+                </section>
                     <section class="found">
                         <div class="sorting">
                             <div class="container-smaal"> 
@@ -271,38 +267,54 @@
                             </div>
                         </div>
                         <ul class="flat">
-                            <li class="flat-found">
-                                <div class="flat-picture">
-                                    <img src="img/hotel-picture.jpg" width="135" height="90" alt="Квартира">
+                          <li class="flat-found">
+                            <div class="flat-picture">
+                              <img src="img/hotel-picture.jpg" width="260" height="260" alt="Квартира">
+                            </div>
+                            <div>
+                              <h3>3-х комнатная квартира</h3> 
+                              <div class="col-md-4 col-form-label">ул. 5 Армии, 6</div> 
+                              <p>Сибади - ДК Малунцева</p>
+                              <div class="flex-container">
+                                <div class="more-info-container">
+                                  <div class="area"><p>Площадь</p> 117<sub>2</sub></div>   
+                                  <div class="floor"><p>Этаж</p> 13</div>
+                                  <div class="updated"><p>Обновлено</p> 03.03 в 07:53</div>
+                                  <div class="source"><p>Источник</p>Yandex</div>                 
+                                </div> 
+                                <div class="booking-container">
+                                  <label class="form-check-label">
+                                    <input class="visually-hidden" type="checkbox" name="direct-no" value="Добавить в отчет">
+                                    <button  class="button button--submit default-form__button" type="submit">ДОБАВИТЬ В ОТЧЕТ</button>                                            
+                                  </label>
                                 </div>
-                                <div>
-                                    <h3>3-х комнатная квартира</h3> 
-                                    <div class="col-md-4 col-form-label">ул. 5 Армии, 6</div> 
-                                    <p>Сибади - ДК Малунцева</p>
-                                    <div class="flex-container">
-                                        <div class="more-info-container">
-                                          <div class="area"><p>Площадь</p> 117<sub>2</sub></div>   
-                                          <div class="floor"><p>Этаж</p> 13</div>
-                                          <div class="updated"><p>Обновлено</p> 03.03 в 07:53</div>
-                                          <div class="source"><p>Источник</p>Yandex</div>                 
-                                        </div> 
-                                        <div class="booking-container">
-                                            <label class="form-check-label">
-                                              <input class="visually-hidden" type="checkbox" name="direct-no" value="Добавить в отчет">
-                                              <button  class="button button--submit default-form__button" type="submit">ДОБАВИТЬ В ОТЧЕТ</button>                                            
-                                            </label>
-                                        </div>
-                                    </div>
+                            </div>
+                          </li>
+                          <li class="flat-found">
+                            <div class="flat-picture">
+                              <img src="img/hotel-picture.jpg" width="260" height="260" alt="Квартира">
+                            </div>
+                            <div>
+                              <h3>3-х комнатная квартира</h3> 
+                              <div class="col-md-4 col-form-label">ул. 5 Армии, 6</div> 
+                              <p>Сибади - ДК Малунцева</p>
+                              <div class="flex-container">
+                                <div class="more-info-container">
+                                  <div class="area"><p>Площадь</p> 117<sub>2</sub></div>   
+                                  <div class="floor"><p>Этаж</p> 13</div>
+                                  <div class="updated"><p>Обновлено</p> 03.03 в 07:53</div>
+                                  <div class="source"><p>Источник</p>Yandex</div>                 
+                                </div> 
+                                <div class="booking-container">
+                                  <label class="form-check-label">
+                                    <input class="visually-hidden" type="checkbox" name="direct-no" value="Добавить в отчет">
+                                    <button  class="button button--submit default-form__button" type="submit">ДОБАВИТЬ В ОТЧЕТ</button>                                            
+                                  </label>
                                 </div>
-                    </div>
-                  </form>
-                </aside>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="/js/bundle.js" defer></script>
-    </div>
+                            </div>
+                          </li>
+                        </ul>
+                    </section>
+                  </main>
   </body>
 </html>
